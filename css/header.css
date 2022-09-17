@@ -52,8 +52,55 @@ header .logo_and_links {
     margin-right: 0;
 }
 
-@media screen and (max-width: 625px) {
+.toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(../images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+
+.toggle.active {
+    position: fixed;
+    right: 20px;
+    background: url(../images/close.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+header .listLinks.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #87509c;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+@media screen and (max-width: 650px) {
     .listLinks {
         display: none;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .listLinks.active li {
+        margin: 20px 0;
+        font-size: 24px;
+        font-weight: 300;
     }
 }

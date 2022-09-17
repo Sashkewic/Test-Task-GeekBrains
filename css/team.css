@@ -68,6 +68,14 @@
     color: #30bae7;
 }
 
+.team_card .list_social_sites {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 800px) {
     .team_cards {
         justify-content: center;
